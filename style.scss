@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	background-image: linear-gradient(115deg, #3a3a9ecc, #8888ceb3),
+		url(https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500;);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x: center;
+}
+body {
+	color: rgb(224, 224, 224);
+	font-family: Poppins, sans-serif;
+	display: flex;
+	flex-direction: column;
+}
+
+#title {
+	text-align: center;
+	margin-top: 1em;
+	font-weight: 500;
+}
+#description {
+	text-align: center;
+	font-style: italic;
+	margin-top: 5px;
+}
+
+.container {
+	background-color: rgba(13, 6, 48, 0.8);
+	display: flex;
+	flex-direction: column;
+	max-width: 95%;
+	margin: 1em auto;
+	padding: 20px;
+	border-radius: 8px;
+	.form-group {
+		display: flex;
+		flex-direction: column;
+
+		margin-bottom: 2vh;
+		label {
+			// margin: 2px;
+		}
+		.form-control,
+		.input-textarea,
+		button {
+			font-family: inherit;
+			border-radius: 5px;
+			display: block;
+			width: 100%;
+			outline: none;
+			border: 2px solid #b6b6f1b3;
+			padding: 2px 8px;
+			margin: 8px auto;
+		}
+		.form-control:focus {
+			border: 2px solid #5e5ed4b3;
+		}
+	}
+	input[type='checkbox'],
+	input[type='radio'] {
+		margin-right: 10px;
+		display: inline-flex;
+		align-items: center;
+		font-size: 1.2em;
+		transform: scale(1.45);
+	}
+	p {
+		margin-bottom: 5px;
+	}
+	#submit {
+		background-color: #a8d0db;
+		padding: 8px;
+	}
+}
